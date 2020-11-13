@@ -6,7 +6,7 @@ import random
 import time
 
 class Inky():
-    def __init__(self, x, y, t):
+    def __init__(self, path, x, y, t):
         self.x_debut = x
         self.y_debut = y
         self.x = x
@@ -17,9 +17,10 @@ class Inky():
         self.direction = 'left'
         self.direction_wanted = 'left'
         self.old_direction = 'right'
+        self.path = path
 
-        self.profile = image.load("Images/Inky_right.jpg")
-        self.img = image.load("Images/Inky_right.jpg")
+        self.profile = image.load(self.path+"\\Images\\Inky_right.jpg")
+        self.img = image.load(self.path + "\\Images\\Inky_right.jpg")
         self.img = self.img.convert()
         self.rect = self.img.get_rect()
         self.rect.center = (self.x, self.y)

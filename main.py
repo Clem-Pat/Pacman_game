@@ -293,15 +293,15 @@ def main():
 
     time_start = time.time()
 
-    clyde = Clyde(475, 295, time_start)
-    blinky = Blinky(445, 260, time_start)
-    inky = Inky(415, 295, time_start)
-    pinky = Pinky(445, 295, time_start)
-    pacman = Pacman(445, 440)
+    clyde = Clyde(path, 475, 295, time_start)
+    blinky = Blinky(path, 445, 260, time_start)
+    inky = Inky(path, 415, 295, time_start)
+    pinky = Pinky(path, 445, 295, time_start)
+    pacman = Pacman(path, 445, 440)
 
-    pacman_vie1 = Pacman(60, 100)
-    pacman_vie2 = Pacman(90, 100)
-    pacman_vie3 = Pacman(120, 100)
+    pacman_vie1 = Pacman(path, 60, 100)
+    pacman_vie2 = Pacman(path, 90, 100)
+    pacman_vie3 = Pacman(path, 120, 100)
     nbr_vies = 2
 
     pacman_chemin = chemin('pacman')

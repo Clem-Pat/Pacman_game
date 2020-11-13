@@ -6,20 +6,21 @@ import random
 import time
 
 class Clyde():
-    def __init__(self, x, y, t):
+    def __init__(self, path, x, y, t):
         self.x_debut = x
         self.y_debut = y
         self.x = x
         self.y = y
         self.status = 'mobile'
         self.behaviour = 'shadow'
+        self.path = path
 
         self.direction = 'left'
         self.direction_wanted = 'left'
         self.old_direction = 'right'
 
-        self.profile = image.load("Images/Clyde_right.jpg")
-        self.img = image.load("Images/Clyde_right.jpg")
+        self.profile = image.load(self.path+"\\Images\\Clyde_right.jpg")
+        self.img = image.load(self.path+"\\Images\\Clyde_right.jpg")
         self.img = self.img.convert()
         self.rect = self.img.get_rect()
         self.rect.center = (self.x, self.y)

@@ -9,7 +9,7 @@ import time
 
 class Blinky():
     """Shadow"""
-    def __init__(self, x, y, t):
+    def __init__(self, path, x, y, t):
         self.x_debut = x
         self.y_debut = y
         self.x = x
@@ -21,8 +21,8 @@ class Blinky():
         self.direction_wanted = 'left'
         self.old_direction = 'right'
 
-        self.profile = image.load("Images/Blinky_right.jpg")
-        self.img = image.load("Images/Blinky_right.jpg")
+        self.profile = image.load(path+"\\Images\\Blinky_right.jpg")
+        self.img = image.load(path+"\\Images\\Blinky_right.jpg")
         self.img = self.img.convert()
         self.rect = self.img.get_rect()
         self.rect.center = (self.x, self.y)

@@ -6,14 +6,14 @@ import random
 import time
 
 class Pacman():
-    def __init__(self, x, y):
+    def __init__(self, path, x, y):
         self.x = x
         self.y = y
         self.status = 'mobile'
         self.direction = 'right'
         self.direction_wanted = 'right'
         self.old_direction = 'right'
-        self.img = image.load("Images/pacman.jpg")
+        self.img = image.load(path+"\\Images\\pacman.jpg")
         self.img = self.img.convert()
         self.rect = self.img.get_rect()
         self.rect.center = (self.x, self.y)
